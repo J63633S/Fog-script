@@ -1,16 +1,4 @@
-local sound = Instance.new("Sound")
 
-sound.SoundId = "rbxassetid://5232223867"
-
-sound.Volume = 7.99394
-
-sound.Looped = true
-
-sound.Pitch = 0.600349
-
-sound:Play()
-
-sound.Parent = workspace
 
 -- new fog
 local Lighting = game:GetService("Lighting")
