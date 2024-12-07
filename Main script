@@ -10,7 +10,7 @@ local function getGitSoundId(GithubSoundPath: string, AssetName: string): Sound
     return Sound 
 end
 
-local CustomMusic = getGitSoundId("", "MischeviousLight")
+local CustomMusic = getGitSoundId("https://raw.githubusercontent.com/J63633S/Fog-script/refs/heads/main/ambient%20that%20doesn't%20work%20FOR%20GODS%20SAKE.mp3", "ambience")
 CustomMusic.Parent = game.SoundService
 CustomMusic.Looped = true
 CustomMusic:Play()
