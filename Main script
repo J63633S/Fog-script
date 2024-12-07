@@ -15,6 +15,22 @@ CustomMusic.Parent = game.SoundService
 CustomMusic.Looped = true
 CustomMusic:Play()
 
+game.SoundService.AmbientReverb = Enum.ReverbType.Cave
+
+local FigureLibraryMusic = workspace.Ambience.MusicOrSomething
+
+local function modifySoundId(GithubSoundPath: string, AssetName: string, Sound: Sound): ()
+    local Url = GithubSoundPath
+
+    if not isfile(AssetName..".mp3") then 
+        writefile(AssetName..".mp3", game:HttpGet(Url)) 
+    end
+
+    Sound.SoundId = getcustomasset(AssetName..".mp3", true)
+end
+
+modifySoundId("https://github.com/ChronoAcceleration/Hotel-Plus-Plus/raw/refs/heads/main/Assets/MischeviousHum.mp3", "MischeviousHum", FigureLibraryMusic)
+
 -- new fog
 local Lighting = game:GetService("Lighting")
 Lighting.Ambient = Color3.new(0, 0, 0)
