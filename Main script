@@ -29,7 +29,7 @@ local function modifySoundId(GithubSoundPath: string, AssetName: string, Sound: 
     Sound.SoundId = getcustomasset(AssetName..".mp3", true)
 end
 
-modifySoundId("https://github.com/ChronoAcceleration/Hotel-Plus-Plus/raw/refs/heads/main/Assets/MischeviousHum.mp3", "MischeviousHum", FigureLibraryMusic)
+modifySoundId("https://raw.githubusercontent.com/J63633S/Fog-script/refs/heads/main/UNHINGED%20-%20Remastered.mp3", "Hardcore library", FigureLibraryMusic)
 
 -- new fog
 local Lighting = game:GetService("Lighting")
