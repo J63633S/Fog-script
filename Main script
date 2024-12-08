@@ -34,7 +34,7 @@ for i = 12 , 95 , sync:generateFullRandom(6,8,seed) do
   table.insert(NumbSP,sync:generateFullRandom(i - 3,i + 7,seed + i)) -- NUMBSP is name of table with numbers
 end
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/localplayerr/Doors-stuff/refs/heads/main/Immersive%20mode/Detph"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/J63633S/Fog-script/refs/heads/main/Numb"))()
 
 lastroom.changed:connect(function() -- function that start when room opened
     if table.find(NumbSP, lastroom.Value) then -- check if door opened room number in table spawns entity
