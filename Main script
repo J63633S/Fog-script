@@ -1,5 +1,5 @@
 local sync = loadstring(game:HttpGet("https://raw.githubusercontent.com/ChronoAcceleration/Comet-Development/refs/heads/main/Doors/Utility/SyncHelper.lua"))()
-local latest room = game.ReplicatedStorage.GameData.LatestRoom
+local last room = game.ReplicatedStorage.GameData.LatestRoom
 local NumbSP = {12} -- table with numbers of rooms when entity should spawn
 
 -- you should past it at first strokes of code and not change it
