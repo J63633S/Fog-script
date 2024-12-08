@@ -24,6 +24,24 @@ Lighting.Brightness = 0.1
 
 require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Credits to Chrono for the fog.",true)
 
+sync = loadstring(game:HttpGet("https://raw.githubusercontent.com/ChronoAcceleration/Comet-Development/refs/heads/main/Doors/Utility/SyncHelper.lua"))()
+local latest room = game.ReplicatedStorage.GameData.LatestRoom
+local NumbSP = {12} -- table with numbers of rooms when entity should spawn
+
+-- you should past it at first strokes of code and not change it
+
+for i = 12 , 95 , sync:generateFullRandom(6,8,seed) do
+  table.insert(NumbSP,sync:generateFullRandom(i - 3,i + 7,seed + i)) -- NUMBSP is name of table with numbers
+end
+
+lastroom.changed:connect(function() -- function that start when room opened
+    if table.find(NumbSP, lastroom.Value) then -- check if door opened room number in table spawns entity
+      task.spawn(function()
+            -- entity code past here
+      end)
+  end
+end
+
 -- Display a warning message in the game to show this script is running
 warn("Good luck")
 
