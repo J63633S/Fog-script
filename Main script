@@ -37,7 +37,7 @@ end
 lastroom.changed:connect(function() -- function that start when room opened
     if table.find(NumbSP, lastroom.Value) then -- check if door opened room number in table spawns entity
       task.spawn(function()
-https://raw.githubusercontent.com/J63633S/Fog-script/refs/heads/main/Numb            -- entity code past here
+               -- entity code past here
       end)
   end
 end
