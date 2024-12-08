@@ -1,6 +1,7 @@
 local sync = loadstring(game:HttpGet("https://raw.githubusercontent.com/ChronoAcceleration/Comet-Development/refs/heads/main/Doors/Utility/SyncHelper.lua"))()
-local last room = game.ReplicatedStorage.GameData.LatestRoom
-local NumbSP = {12} -- table with numbers of rooms when entity should spawn
+local lastroom = game.ReplicatedStorage.GameData.LatestRoom
+local seed = game.ReplicatedStorage.GameData.GameSeed.Value
+local NumbSP = {} -- table with numbers of rooms when entity should spawn
 
 -- you should past it at first strokes of code and not change it
 
@@ -11,9 +12,9 @@ end
 lastroom.changed:connect(function() -- function that start when room opened
     if table.find(NumbSP, lastroom.Value) then -- check if door opened room number in table spawns entity
       task.spawn(function()
- loadstring(game:HttpGet("https://raw.githubusercontent.com/J63633S/Fog-script/refs/heads/main/Numb"))()           -- entity code past here
+ 	 loadstring(game:HttpGet("https://raw.githubusercontent.com/J63633S/Fog-script/refs/heads/main/Numb"))()           -- entity code past here
       end)
-  end
+    end
 end
 local function getGitSoundId(GithubSoundPath: string, AssetName: string): Sound
     local Url = GithubSoundPath
