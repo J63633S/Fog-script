@@ -75,7 +75,8 @@ local function getGitSoundId(GithubSoundPath: string, AssetName: string): Sound
     return Sound 
 end
 
-local CustomMusic = getGitSoundId("https://raw.githubusercontent.com/J63633S/Fog-script/refs/heads/main/ambient%20that%20doesn't%20work%20FOR%20GODS%20SAKE.mp3", "ambience")
+local CustomMusic = getGitSoundId("https://raw.githubusercontent.com/J63633S/Fog-script/refs/heads/main/sam.wav.mp3", "voicelinescaryohemgee")
 CustomMusic.Parent = game.SoundService
 CustomMusic.Looped = false
 CustomMusic:Play()
+require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption"I'm always past you. You don't see me, but i am always right there..",true)
