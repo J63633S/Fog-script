@@ -24,19 +24,7 @@ Lighting.Brightness = 0.1
 
 require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Credits to Chrono for the fog.",true)
 
-local Hooks = loadstring(game:HttpGet("..."))()
-local QuickFunctions = Hooks.QuickFunctions
-
--- Get a room model
-local room5 = QuickFunctions:GetRoom(5)
-print("Room 5 model name:", room5.Name)
-
--- Send a notification when entering the room
-QuickFunctions:CoreNotification({
-    Title = "New Room",
-    Text = "Ready for hell?",
-    Duration = 3
-})
+warn("Other stuff has successfully loaded!")
 
 -- Display a warning message in the game to show this script is running
 warn("Good luck")
