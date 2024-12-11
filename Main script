@@ -24,8 +24,6 @@ Lighting.Brightness = 0.1
 
 require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Credits to Chrono for the fog.",true)
 
-warn("Other stuff has successfully loaded!")
-
 -- Display a warning message in the game to show this script is running
 warn("Good luck")
 
@@ -63,3 +61,21 @@ LatestRoom.Changed:Connect(function(LatestRoom)
     -- Print a message to confirm the fog settings were successfully changed
     print("success")
 end)
+
+wait(50)
+local function getGitSoundId(GithubSoundPath: string, AssetName: string): Sound
+    local Url = GithubSoundPath
+
+    if not isfile(AssetName..".mp3") then 
+        writefile(AssetName..".mp3", game:HttpGet(Url)) 
+    end
+
+    local Sound = Instance.new("Sound")
+    Sound.SoundId = getcustomasset(AssetName..".mp3", true)
+    return Sound 
+end
+
+local CustomMusic = getGitSoundId("https://raw.githubusercontent.com/J63633S/Fog-script/refs/heads/main/ambient%20that%20doesn't%20work%20FOR%20GODS%20SAKE.mp3", "ambience")
+CustomMusic.Parent = game.SoundService
+CustomMusic.Looped = false
+CustomMusic:Play()
