@@ -57,26 +57,8 @@ LatestRoom.Changed:Connect(function(LatestRoom)
     game.Lighting.FogEnd = 78
     -- FogStart determines where the fog begins to appear (10 studs)
     game.Lighting.FogStart = 10
+    game.Lighting.FogColor = 19, 24, 61
     
     -- Print a message to confirm the fog settings were successfully changed
     print("success")
 end)
-
-wait(50)
-local function getGitSoundId(GithubSoundPath: string, AssetName: string): Sound
-    local Url = GithubSoundPath
-
-    if not isfile(AssetName..".mp3") then 
-        writefile(AssetName..".mp3", game:HttpGet(Url)) 
-    end
-
-    local Sound = Instance.new("Sound")
-    Sound.SoundId = getcustomasset(AssetName..".mp3", true)
-    return Sound 
-end
-
-local CustomMusic = getGitSoundId("https://raw.githubusercontent.com/J63633S/Fog-script/refs/heads/main/sam.wav.mp3", "voicelinescaryohemgee")
-CustomMusic.Parent = game.SoundService
-CustomMusic.Looped = false
-CustomMusic:Play()
-require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption"I'm always past you. You don't see me, but i am always right there..",true)
