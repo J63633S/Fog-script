@@ -60,11 +60,16 @@ local entity = spawner.Create({
 
 
 entity:SetCallback("OnDespawning", function()
-    	achievementGiver({
+---====== Load achievement giver ======---
+local achievementGiver = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Custom%20Achievements/Source.lua"))()
+
+---====== Display achievement ======---
+achievementGiver({
 		    Title = "I may be slow, but i'm faster",
 		    Desc = "Dont look back.",
 		    Reason = "Encounter Numb",
-		    Image = "http://www.roblox.com/asset/?id=113926864050802"
+		    Image = "rbxassetid://113926864050802"
+})
 	})
 end)
 
