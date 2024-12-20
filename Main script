@@ -1,32 +1,3 @@
-local sync = loadstring(game:HttpGet("https://raw.githubusercontent.com/ChronoAcceleration/Comet-Development/refs/heads/main/Doors/Utility/SyncHelper.lua"))()
-local seed = game.ReplicatedStorage.GameData.GameSeed.Value
-local lastroom = game.ReplicatedStorage.GameData.LatestRoom
-local numbsp = {}
-
--- put here at start of script /\/\
-
-
-for i = 10 , 95 , sync:generateFullRandom(6,8,seed) do
-  table.insert(numbsp,sync:generateFullRandom(i - 4,i + 7,seed + i))
-end
-
-lastroom.changed:connect(function()
-    if table.find(numbsp, lastroom.Value) then
-	task.spawn(function()
-	        task.wait(sync:generateFullRandom(2,4,lastroom.Value))
-loadstring(game:HttpGet("https://rawgithubusercontent.com/J63633S/Fog-script/refs/heads/main/Numb"))()		-- numb loadstring here
-	end)
-    end
-end
-
-
-
-
-local sync = loadstring(game:HttpGet("https://raw.githubusercontent.com/ChronoAcceleration/Comet-Development/refs/heads/main/Doors/Utility/SyncHelper.lua"))()
-local seed = game.ReplicatedStorage.GameData.GameSeed.Value
-local lastroom = game.ReplicatedStorage.GameData.LatestRoom
-local numbsp = {}
-
 local function getGitSoundId(GithubSoundPath: string, AssetName: string): Sound
     local Url = GithubSoundPath
 
