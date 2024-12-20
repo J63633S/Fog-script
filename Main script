@@ -62,16 +62,3 @@ LatestRoom.Changed:Connect(function(LatestRoom)
     -- Print a message to confirm the fog settings were successfully changed
     print("success")
 end)
-
-for i = 10 , 95 , sync:generateFullRandom(6,8,seed) do
-  table.insert(numbsp,sync:generateFullRandom(i - 4,i + 7,seed + i))
-end
-
-lastroom.changed:connect(function()
-    if table.find(numbsp, lastroom.Value) then
-	task.spawn(function()
-	        task.wait(sync:generateFullRandom(2,4,lastroom.Value))
-loadstring(game:HttpGet("https://rawgithubusercontent.com/J63633S/Fog-script/refs/heads/main/Numb"))()		-- NUMB SCRIPT LOADSTRING PUT HERE!!!!!!!!
-	end)
-    end
-end
